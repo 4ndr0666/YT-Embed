@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YT-Embed",
+  "version": "1.0.0",
+  "description": "Hotkey For YouTube Embedded.",
+  "permissions": ["tabs", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "modify_youtube_link": {
+      "suggested_key": {
+        "default": "Ctrl+I"
+      },
+      "description": "Default hotkey Ctrl+I redirects to embedded version of YouTube"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
