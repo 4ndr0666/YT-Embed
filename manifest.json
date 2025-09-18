@@ -1,9 +1,11 @@
 {
   "manifest_version": 3,
   "name": "YT-Embed",
-  "version": "1.0.0",
-  "description": "Hotkey For YouTube Embedded.",
-  "permissions": ["tabs", "activeTab"],
+  "version": "1.1.0", // // Version incremented to reflect feature additions.
+  "description": "Hotkey For YouTube Embedded. Now with expanded URL support.",
+  "permissions": [
+    "tabs" // // The "tabs" permission is required to read the `tab.url` property of arbitrary pages. "activeTab" is not sufficient for this background context.
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -12,10 +14,20 @@
       "suggested_key": {
         "default": "Ctrl+I"
       },
-      "description": "Default hotkey Ctrl+I redirects to embedded version of YouTube"
+      "description": "Redirects YouTube watch/short/live pages to the embedded version."
     }
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }
